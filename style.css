@@ -1,0 +1,192 @@
+@font-face {
+    font-family: Avara;
+    src: url("/Users/seamusedson/Downloads/Avara-master/fonts/webfonts/Bold/Avara-Bold.woff") format("woff");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  text-align: left;
+  font-family: sans-serif;
+  color: #22f;
+  line-height: 1.4em;
+}
+
+h1 {
+  margin: 10px 0 40px 0;
+  font-weight: normal;
+  font-size: 40px;
+  /* text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: white; */
+
+
+}
+
+p{
+  font-size: 32px;
+  line-height: 1.3em;
+  max-width: 900px;
+  margin-bottom: 0.6em;
+  color: #22f;
+  margin-left: 200px;
+}
+
+a{
+  color: #aeac00;
+}
+
+
+ol, ul{
+  margin-left: 200px;
+}
+
+
+li {
+  font-size: 32px;
+  line-height: 1.6em;
+}
+
+h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 32px;
+  margin-left: 200px;
+  font-family: Avara;
+  margin-bottom: 20px;
+}
+
+
+
+img{
+  max-width: 95%;
+  max-height: 80%;
+}
+
+.slide {
+  margin: 0;
+  height: 100vh;
+  background: #eee;
+  position: relative;
+  border-bottom: 1px solid #22f;
+}
+
+.content {
+  padding: 120px 60px 20px 60px;
+}
+
+.center {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.twitter-tweet{
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.green {
+  background: #549514;
+}
+
+.yellow {
+  background: #f76060;
+}
+
+.blue {
+  background: #22f;
+}
+
+.top{
+  overflow: hidden;
+  background-color: #eee;
+  border-bottom: 1px solid #22f;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.top p {
+  margin: 20px 60px;
+  font-size: 16px;
+  line-height: 0em;
+  color: #22f;
+}
+
+.date{
+  position: fixed;
+  left: 0;
+}
+
+.title{
+  position: fixed;
+  left: 200px;
+}
+
+.course{
+  text-align: right;
+  max-width: none;
+
+}
+
+.big{
+  font-family: Avara;
+  text-align: center;
+  margin: auto;
+  font-size: 9vw;
+  line-height: 1.1em;
+  margin-bottom: 80px;
+  max-width: none;
+}
+
+p.caption {
+  position: absolute;
+  margin: 0;
+  bottom: 40px;
+  left: 60px;
+  font-size: 16px;
+}
+
+.assignment p, .assignment li {
+  font-size: 24px;
+}
+
+.alt h1, .alt h2, .alt h3, .alt p, .alt li{
+  color: #ddd;
+}
+
+.centered{
+  text-align: center;
+  margin: auto;
+}
