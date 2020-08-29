@@ -1,6 +1,6 @@
 @font-face {
     font-family: Avara;
-    src: url("/ADSN-425-slides/Resources/Avara-Bold.woff") format("woff");
+    src: url("Resources/Avara-Bold.woff") format("woff");
 }
 
 *{
@@ -138,8 +138,8 @@ strong {
 }
 
 .top p {
-  margin: 20px 60px;
-  font-size: 16px;
+  margin: 30px 60px;
+  font-size: 24px;
   line-height: 0em;
   color: #22f;
 }
@@ -180,6 +180,15 @@ p.caption {
 
 .assignment p, .assignment li {
   font-size: 24px;
+}
+
+.linklist {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.linklist h3 {
+  color: #f76060;
 }
 
 .alt h1, .alt h2, .alt h3, .alt p, .alt li{
