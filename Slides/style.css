@@ -81,7 +81,7 @@ img{
 
 .slide {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: #eee;
   position: relative;
   border-bottom: 1px solid #22f;
