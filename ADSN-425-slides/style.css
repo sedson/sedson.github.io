@@ -58,7 +58,7 @@ li {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: auto;
@@ -170,6 +170,16 @@ strong {
   max-width: none;
 }
 
+.mid{
+  font-family: Avara;
+  text-align: center;
+  margin: auto;
+  font-size: 60px;
+  line-height: 1.1em;
+  margin-bottom: 80px;
+  max-width: 640px;
+}
+
 p.caption {
   position: absolute;
   margin: 0;
@@ -198,4 +208,16 @@ p.caption {
 .centered{
   text-align: center;
   margin: auto;
+}
+
+
+.emph {
+  text-decoration: underline;
+}
+
+
+
+p.des {
+  max-width: 640px;
+  margin: 20px auto;
 }
