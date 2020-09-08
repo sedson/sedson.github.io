@@ -221,3 +221,8 @@ p.des {
   max-width: 640px;
   margin: 20px auto;
 }
+
+ul ul {
+  margin-left: 60px;
+  list-style-type: square;
+}
