@@ -226,3 +226,18 @@ ul ul {
   margin-left: 60px;
   list-style-type: square;
 }
+
+.indent{
+  padding-left: 90px;
+}
+
+.highlight
+{
+  text-transform: uppercase;
+  font-family: Avara;
+}
+
+.strike
+{
+  text-decoration: line-through;
+}
