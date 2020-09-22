@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADSN-425</title>
+  </head>
+  <body>
+
+  </body>
+</html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="top">
+    <p class="date">Sep 21</p>
+    <p class="title">3D Foundations</p>
+    <p class="course">3D Graphics + Animation</p>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <img src="Resources/cover.png" class="center">
+      <p class="big">3D Foundations</p>
+      <h2 class="centered">September 21, 2020</h2>
+    </div>
+  </div>
+
+  <div class = "slide">
+    <div class ="content">
+      <h1>Agenda</h1>
+      <ol>
+        <li>What are 3D objects?</li>
+        <li>The polygon mesh – vertices, edges, & faces</li>
+        <li>Normals – smooth vs. flat shading</li>
+        <li>How does a computer render 3D stuff?</li>
+        <li>3D cameras</li>
+        <li>3D lights – point, sun, spot, & area</li>
+        <li>Materials and properties</li>
+        <li>Break</li>
+        <li>Blender – editing a cube</li>
+        <li>Editing tools – extrude, inset, bevel, & loop cut</li>
+        <li>Blender – adding lights and camera</li>
+        <li>Blender – materials intro</li>
+        <li>Follow Along – Blender #2</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="slide green">
+    <div class="content alt">
+      <p class="big">Meshes</p>
+    </div>
+  </div>
+
+  <div class = "slide">
+    <div class ="content">
+      <h1>What is a polygon mesh?</h1>
+      <ol>
+        <li>A type of data that can describe any 3D object</li>
+        <li>Made of <strong>vertices</strong> (points), <strong>edges</strong> (lines), & <strong>faces</strong> (flat shapes)</li>
+        <li>Easy to edit and modify using most 3D software</li>
+        <li>Each vertex can have data attached to it</li>
+        <li>Each vertex and face have a direction – called a <strong>normal</strong></li>
+        <li>Can only ever have straight lines – therefore have a visual "resolution"</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- <div class = "slide green">
+    <div class ="content alt">
+      <p class="mid">MESH</p>
+      <p class="centered">A collection of points, lines, and shapes, that describe a 3D object</p>
+    </div>
+  </div> -->
+
+  <div class="slide">
+    <div class="content">
+      <h1>Vertices</h1>
+      <p class="caption">A cube has 8 verts</p>
+      <img class="center" src="Resources/verts.png">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Edges</h1>
+      <p class="caption">A cube has 12 edges</p>
+      <img class="center" src="Resources/edges.png">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Faces</h1>
+      <p class="caption">A cube has 6 faces</p>
+      <img class="center" src="Resources/faces.png">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Normals</h1>
+      <p class="caption">The normal is the opposite, or perpendicular, angle to a face. This tells the computer which way something is pointing, and determines how the lighting will look on that object.</p>
+      <img class="center" src="Resources/normals.png">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Normals – flat vs. smooth shading</h1>
+      <p class="caption">Identical meshes, except for shading method</p>
+      <img class="center" src="Resources/flat-smooth.png">
+    </div>
+  </div>
+
+
+  <div class="slide green">
+    <div class="content alt">
+      <p class="big">Cameras</p>
+    </div>
+  </div>
+
+  <div class = "slide">
+    <div class ="content">
+      <h1>What is a camera?</h1>
+      <ol>
+        <li>A transform (pos, rot, scale) from which we are viewing a 3D scene</li>
+        <li>Need a camera to render – only way to tell the computer "where" to take the picture from</li>
+        <li>Have tons of settings to describe how you want the computer to take the picture</li>
+      </ol>
+    </div>
+  </div>
+
+
+  <div class="slide green">
+    <div class="content alt">
+      <p class="big">Lights</p>
+    </div>
+  </div>
+
+  <div class = "slide">
+    <div class ="content">
+      <h1>What are Lights?</h1>
+      <ol>
+        <li>Simulations of different real-world light sources</li>
+        <li>Lights + meshes will define what scenes look like</li>
+        <li>4 major kinds – point, sun (directional), spot, & area</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="slide black">
+    <div class="content alt">
+      <h1>Point Light</h1>
+      <p class="caption">Like iPhone flashlight</p>
+      <img class="center" src="Resources/light-point.png">
+      <img src="Resources/pointicon.png" class="li">
+    </div>
+  </div>
+
+  <div class="slide black">
+    <div class="content alt">
+      <h1>Sun (directional) Light</h1>
+      <p class="caption">Like the sun</p>
+      <img class="center" src="Resources/light-sun.png">
+      <img src="Resources/sunicon.png" class="li">
+    </div>
+  </div>
+
+  <div class="slide black">
+    <div class="content alt">
+      <h1>Spot Light</h1>
+      <p class="caption">Like a stage light</p>
+      <img class="center" src="Resources/light-spot.png">
+      <img src="Resources/spoticon.png" class="li">
+    </div>
+  </div>
+
+  <div class="slide black">
+    <div class="content alt">
+      <h1>Area Light</h1>
+      <p class="caption">Like a photo studio</p>
+      <img class="center" src="Resources/light-area.png">
+      <img src="Resources/areaicon.png" class="li">
+    </div>
+  </div>
+
+  <div class="slide green">
+    <div class="content alt">
+      <p class="big">Materials</p>
+    </div>
+  </div>
+
+  <div class = "slide">
+    <div class ="content">
+      <h1>What are materials?</h1>
+      <ol>
+        <li>Instructions that tell the computer how meshes should react to light sources</li>
+        <li>Recently it has become possible to convincingly simululate many kinds of real world materials</li>
+        <li>For now, principled BSDF – based on Diney + Pixar research and gives lots of properties</li>
+        <li>Shader Editor – exposes a ton of control to create scenes ranging from realistic to stylized</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Property – color</h1>
+      <img class="center" src="Resources/mats-color.png">
+      <p class="caption">Changing only "Base Color" property</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Property – roughness</h1>
+      <img class="center" src="Resources/mat-rough.png">
+      <p class="caption">Changing only "Roughness" property: 0, 0.25, 0.5, 1</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Property – metallic</h1>
+      <img class="center" src="Resources/mat-metals.png">
+      <p class="caption">Changing "Metallic" property: 0 (white), 0 (golden), 1 (white), 1 (golden)</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <h1>Property – normals</h1>
+      <img class="center" src="Resources/mat-norms.png">
+      <p class="caption">Using textures to modify the mesh's normals</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content assignment">
+      <h1>Follow Along – Blender #2</h1>
+      <p>Create a balanced composition using meshes, lights, and materials. Scene should have at least 5 meshes with different materials and 2 lights.</p>
+      <p>Render a .png that is 1920 × 1080 OR 1080 x 1080 and upload to Canvas.</p>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>
