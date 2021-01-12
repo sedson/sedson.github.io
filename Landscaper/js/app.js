@@ -1,9 +1,9 @@
 // some game control settings
 const maxLawnPrice = 10000;
 const numItemsInShop = 3;
-const winAmt = 1000000000;
+let winAmt = 1000000000;
 let lawnArray = []; // for tracking data about each lawn button
-let ButtonIndex = 0; 
+let ButtonIndex = 0;
 let frame = 0; // the current "frame"
 let gameRunning = true;
 
@@ -23,10 +23,10 @@ initGame();
 function updateButtons(){
   frame++;
   let allButtons = document.querySelectorAll(".lawn-button");
-  
+
   for(let i = 0; i < allButtons.length; i++){
     // if the lawn button is animating, update the progress
-    if (lawnArray[i].isAnimating === true) { 
+    if (lawnArray[i].isAnimating === true) {
       let button = allButtons[i];
       let children = button.childNodes;
       let overlay = null;
@@ -39,19 +39,19 @@ function updateButtons(){
 
       // update the progress
       lawnArray[i].progress += user.mowingSpeed;
-      
+
       // if the progress has made it to end reset
       if (lawnArray[i].progress >= 100) {
         lawnArray[i].isAnimating = false;
         lawnArray[i].progress = 0;
         user.money += user.perLawnEarnings;
-        if (user.autoMower.enabled) lawnArray[i].isAnimating = true; 
+        if (user.autoMower.enabled) lawnArray[i].isAnimating = true;
         // Reset and restart this lawn button if the user's autoMower is on
       }
       overlay.style.width = lawnArray[i].progress + "%"; //update the CSS width of the overlay
     }
   }
-  
+
   if(user.money >= winAmt){
     document.querySelector("#win").style.display = "flex";
   }
@@ -59,7 +59,7 @@ function updateButtons(){
   // update the report card every frame
   displayMoney();
   updateShopClasses();
-  
+
   // call this function again on the window's next available frame
   if(gameRunning) window.requestAnimationFrame(updateButtons);
 }
@@ -79,15 +79,15 @@ function mowLawn(event){
 }
 
 //-----------------------------------------------------
-// Functions that update the DOM 
+// Functions that update the DOM
 //-----------------------------------------------------
 function displayMoney() {
   let money = document.querySelector('#user-money');
   money.innerHTML = addCommasToNum(user.money);
-  
+
   let prof = document.querySelector('#user-prof');
   prof.innerHTML = addCommasToNum(user.perLawnEarnings);
-  
+
   let speed = document.querySelector('#user-speed');
   speed.innerHTML = user.mowingSpeed.toFixed(1);
 }
@@ -115,15 +115,15 @@ function displayShop() {
       let toolEntry = document.createElement("p");
       toolEntry.classList += "shop-entry ";
       toolEntry.id = tool.name;
-      
+
       // gray it out if user cannot afford
       //if(user.money < tool.cost) toolEntry.classList += "cant-afford";
       toolEntry.innerHTML = `${tool.name} <span class="right-tag">$${addCommasToNum(tool.cost)} <a onclick="buyTool(${i})" >BUY</a></span>`;
-      
+
       let infoText = document.createElement("p");
       let info = "";
       infoText.className = "tool-caption";
-      
+
       if(tool.hasOwnProperty("description")){
         info = tool.description;
       } else {
@@ -184,15 +184,15 @@ function buyTool(index) {
 //-----------------------------------------------------
 function createNewLawn(){
   let lawns = document.querySelector("#lawns");
-  
+
   // making a new lawn object to add to the DOM
   let newLawn = document.createElement("div");
   newLawn.className = "lawn-button";
-  
-  // track a button index and add this ad an ID to the buttons - 
+
+  // track a button index and add this ad an ID to the buttons -
   // so that I index an array of control values when the button is clicked later
   newLawn.id = ButtonIndex.toString();
-  ButtonIndex++; 
+  ButtonIndex++;
 
   newLawn.addEventListener("click", mowLawn); // buttons call this function when clicked
 
@@ -200,7 +200,7 @@ function createNewLawn(){
   let overlay = document.createElement("div");
   overlay.className = "button-overlay";
   newLawn.appendChild(overlay);
-  
+
   // adding internal text
   let text = document.createElement("p");
   text.innerHTML = "Mow Lawn";
@@ -208,7 +208,7 @@ function createNewLawn(){
 
   lawns.appendChild(newLawn);
 
-  // whenever a new lawn button is made 
+  // whenever a new lawn button is made
   // i need to store its basic data in a structure
   // important for the indices of this array to match the indices of buttons in the DOM
   // and the id tags of the buttons

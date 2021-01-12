@@ -49,7 +49,7 @@
     let count = 0;
     function update(){
       count += 0.01;
-      let val = ((Math.sin(count) + 1) / 2) * 25 + 2;
+      let val = ((Math.sin(-count) + 1) / 2) * 25 + 2;
       for(let ele of arr){
         ele.style.width = `calc(100% - ${val}vw)`;
         ele.style.height = `calc(100% - ${val}vw)`;

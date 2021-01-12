@@ -2,11 +2,7 @@
 // make it a function to easily reset it
 const makeUser = () => {
     return{
-      myTools: [
-        {
-          name: "Teeth",
-        }
-      ],
+      myTools: [{ name: "Teeth"}],
       money: 0,
       lawnsMowed: 0,
       mowingSpeed: 0.2,
@@ -64,14 +60,14 @@ const makeTools = () => [
     value: 150,
     speed: 0.2,
     cost: 500
-  }, 
+  },
   {
     name: "Another Employee",
     equippable: true,
     value: 150,
     speed: 0.2,
     cost: 750
-  }, 
+  },
   {
     name: "Hi-Tech Mower",
     equippable: true,
@@ -110,7 +106,7 @@ const makeTools = () => [
     value: 0,
     speed: 2,
     cost: 1000000
-  }, 
+  },
   {
     name: "Management Drones",
     equippable: true,
@@ -131,9 +127,9 @@ const makeTools = () => [
     value: 5000,
     speed: 4,
     cost: 10000000
-  }, 
+  },
   {
-    name: "Deforestation Sqaud",
+    name: "Deforestation Squad",
     equippable: true,
     value: 120000,
     speed: 6,
