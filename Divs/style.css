@@ -1,0 +1,16 @@
+body{
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.s{
+  background: rgba(0,0,20, 0.2);
+  width: calc(100% - 8vw);
+  height: calc(100% - 8vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}

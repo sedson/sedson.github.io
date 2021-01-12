@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LandScaper</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Landscaper</h1>
+      <a onclick="reset()">Reset</a>
+    </nav>
+    <main>
+      <div id="info">
+        <div id="welcome" class="container">
+          <div class="container-header"><h2>Welcome!</h2></div>
+          <div class="content">
+            <p>You've started a landscaping business. Do you have what is takes to earn $1,000,000,000?</p>
+          </div>
+
+        </div>
+        <div id="report" class="container">
+          <div class="container-header">
+            <h2>Report</h2>
+          </div>
+
+          <div class = "content">
+            <p> <span class="left-tag">$</span><span class="right-tag" id="user-money">0</span></p><br>
+            <p> <span class="left-tag">Profit ($/lawn)</span><span class="right-tag" id="user-prof">0</span></p><br>
+            <p> <span class="left-tag">Efficiency (lawns/sec.)</span><span class="right-tag" id="user-speed">0</span></p><br>
+          </div>
+        </div>
+
+        <div id="shop" class="container">
+          <div class="container-header"><h2>Shop</h2></div>
+          <div class="content" id="shop-content">
+          </div>
+        </div>
+
+        <div id="tools" class="container">
+          <div class="container-header"><h2>Tools</h2></div>
+          <div class="content">
+            <ul id="tools-content">
+            </ul>
+          </div>
+        </div>
+    </div>
+      <div id="lawns"></div>
+    </main>
+    <div id="win">
+      <h3>Way to go. Plant some trees next time! <a onclick="reset()"> Play Again?</a></h3>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

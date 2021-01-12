@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap'); */
+
+/* Reset margins and padding */
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+html{
+  padding: 40px;
+}
+
+body{
+  font-family: monospace;
+  font-size: 16px;
+  color: darkolivegreen;
+}
+
+nav{
+  margin-bottom: 20px;
+}
+
+nav a{
+  float: right;
+}
+
+main{
+  display: flex;
+  gap: 10px;
+}
+
+h1{
+  text-transform: uppercase;
+  font-weight: normal;
+  display: inline;
+  margin-right: 100px;
+}
+
+
+#welcome{
+  width: 400px;
+}
+
+.button-overlay{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 155, 0.6);
+  margin: 0;
+}
+
+.lawn-button{
+  height: 40px;
+  user-select: none;
+  background: darkseagreen;
+  
+  cursor: pointer;
+  position: relative;
+  min-width:140px;
+  color: darkolivegreen;
+
+  margin: 0;
+  border: 1px solid darkolivegreen;
+  text-align: center;
+
+}
+
+.lawn-button p{
+  font-family: 'Libre Franklin', sans-serif;
+  pointer-events: none;
+}
+
+
+.lawn-button:hover{
+  background: mediumseagreen;
+}
+
+.container{
+  border: 1px solid darkolivegreen;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.container-header{
+  margin-top: 0;
+  padding: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed darkolivegreen;
+}
+
+.container-header h2{
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  /* color: mintcream; */
+}
+
+#report{
+  width: 400px;
+  height: auto;
+  padding-bottom: 10px;
+  background: lightyellow;
+}
+
+#shop{
+  width: 400px;
+  height: 200px;
+}
+
+.left-tag{
+  float: left;
+  font-family: monospace;
+}
+
+.right-tag{
+  float: right;
+  font-family: monospace;
+}
+
+
+.content{
+  margin-top: 0;
+  padding: 0 10px 20px 10px;
+}
+
+#tools{
+  width: 400px;
+}
+
+a{
+  text-decoration: underline;
+}
+
+a:hover{
+  background-color: greenyellow;
+}
+.user {
+  width: 200px;
+  padding: 20px;
+  height: 100px;
+  background: mediumseagreen;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+p{
+  margin: 0;
+  margin-top: 10px;
+}
+ul{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#lawns{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.cant-afford{
+  color: lightgray;
+}
+
+.cant-afford a:hover{
+  color: red;
+  background: none;
+}
+
+.tool-caption{
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.shop-entry{
+  padding-bottom: 10px;
+  border-bottom: 1px dashed lightgray;
+}
+
+.shop-entry:last-child{
+  border-bottom: none;
+}
+
+#win{
+  background: rgba(85, 107, 47, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+h3{
+  color: white;
+  display: block;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangles (Dec 15)</title>
+    <style media="screen">
+      body { background: ghostwhite; display: flex; flex-direction: column;}
+      .s, .p{
+        background: rgba(0,0,20, 0.2);
+        width: calc(100% - 8vw);
+        height: calc(100% - 8vw);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <div class="p">
+        <div class="s">
+          <div class="s">
+            <div class="s">
+              <div class="s">
+                <div class="s">
+                  <div class="s">
+                    <div class="s">
+                      <div class="s">
+                        <div class="s">
+                          <div class="s">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script>
+
+    let arr = document.querySelectorAll(".s");
+    let count = 0;
+    function update(){
+      count += 0.01;
+      let val = ((Math.sin(count) + 1) / 2) * 25 + 2;
+      for(let ele of arr){
+        ele.style.width = `calc(100% - ${val}vw)`;
+        ele.style.height = `calc(100% - ${val}vw)`;
+    }
+    window.requestAnimationFrame(update);
+  }
+  window.requestAnimationFrame(update);
+
+  </script>
+</html>

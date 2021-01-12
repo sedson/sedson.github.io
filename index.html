@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamus's Stuff</title>
+    <style>
+        body { background-color: ghostwhite; font-family:sans-serif; font-weight: 100;
+               padding: 40px; font-size: 18px; overflow: hidden;}
+        h1 {color: gray; text-transform: uppercase; font-weight: 100; font-size: 18px;}
+        a {color:#545454; display: block; margin-bottom: 0.5rem; text-decoration: none;}
+        .random { position: absolute; z-index: 10; pointer-events: none;}
+        a:hover { color: hotpink}
+    </style>
+</head>
+<body>
+    <h1>Stuff</h1>
+    <a href="./Divs/index.html">Rectangles (Dec. 15)</a>
+    <a href="./Landscaper/index.html">Landscaper Game</a>
+    <script>
+        let body = document.querySelector("body");
+        const scatter = (num, val) => {
+            for(let i = 0; i < num; i++){
+                let rand = document.createElement("p");
+                rand.className = "random";
+                rand.innerHTML = val;
+                rand.style.left = Math.random() * 100 + "%";
+                rand.style.top = Math.random() * 100 + "%";
+                body.appendChild(rand);
+            }
+        }
+        scatter(20, "🌼");
+        scatter(20, "🌸");
+    </script>
+
+</body>
+
+</html>
