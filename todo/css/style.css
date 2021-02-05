@@ -1,0 +1,153 @@
+/* add color variables */
+:root {
+  --bg: #1d1f21;
+  --field: #36393c;
+  --main-text: #dddfe1;
+  --sub-text: #6c6f73;
+  --accent1: #aed3c4;
+  --accent2: #e6890f;
+  --accent3: #d25510;
+  --button: silver;
+  --light: ghostwhite;
+  --border: 1px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: var(--bg);
+  text-align: left;
+}
+
+#container {
+  background-color: none;
+  margin: 1.5rem 3rem 0 3rem;
+}
+
+/* add button */
+#submit {
+	border: none;
+	background-color: var(--field);
+	color: var(--main-text);
+}
+
+/* make the div with the id lists into a flex container */
+#lists {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--main-text);
+}
+
+h2{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--main-text);
+  border-bottom: 1px solid var(--field);
+  padding-bottom: 1rem;
+  display: inline-block;
+  max-width: 200px;
+}
+
+/* Modernize buttons and input */
+
+button {
+  padding: 0.5rem 3rem;
+  border-radius: var(--border);
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+input {
+  width: 50%;
+  max-width: 300px;
+  padding: 0.5rem;
+  background: var(--field);
+  border-radius: var(--border);
+  color: var(--main-text);
+  outline: none;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+#input-container{
+  margin-bottom: 3rem;
+}
+
+#lists button {
+  background: var(--bg);
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--main-text);
+  outline: none;
+  padding: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.25rem;
+}
+
+#completed button{
+  background-color: var(--accent2);
+  border: none;
+  border-radius: 3px;
+  background-image: url("../check.png");
+  background-size: cover;
+}
+
+#todo-list button:hover {
+  background: var(--field);
+}
+
+/* make list containers flex */
+#todo-list,  #completed {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+/* style list items, common styles */
+.todo-item, .done-item {
+  padding: 0.2rem 0;
+  position: relative;
+  color: var(--main-text);
+}
+
+/* Style list item specific to done-item */
+.todo-item p, .done-item p{
+  margin-left: 2rem;
+}
+
+/* Style list item specific to done-item */
+.done-item p {
+  color: var(--sub-text);
+  text-decoration: line-through;
+  margin-bottom: 0.25rem;
+}
+
+.done-item a {
+  color: var(--sub-text);
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 2rem;
+}
+
+.done-item a:hover {
+  text-decoration: underline;
+  color: var(--main-text);
+}
