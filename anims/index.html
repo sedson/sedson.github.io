@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+      body {
+        background: pink;
+        mix-blend-mode: difference;
+      }
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+      }
+
+      div {
+        width: 100%;
+        height: 100%;
+        background: rgba(60,20,80,0.33);
+        animation-iteration-count: infinite;
+        animation-name: anim;
+        animation-duration: 3.14s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .b {
+        background: rgba(255, 255, 255, 0.4);
+        animation-name: anim2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+
+
+      }
+
+      @keyframes anim {
+        0%    { width: 100%; height: 100% }
+        50%   { width: calc(100% - 50vw); height: 100%}
+        100%  { width: 100%; height: 100% }
+      }
+      @keyframes anim2 {
+        0%    { width: 100%; height: calc(100% - 50vh) }
+        50%   { width: 100%; height: 100%}
+        100%  { width: 100%; height: calc(100% - 50vh) }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <div>
+
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="b">
+        <div class="b">
+
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

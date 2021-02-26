@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{padding: 0; margin: 0}
+      .container{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .clockpart{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        display: flex;
+        flex-direction: row;
+      }
+      .left{
+        background: hotpink;
+        height: 100%;
+        width: 50%;
+        border-radius: 500px 0 0 500px
+      }
+      .right{
+        background: yellow;
+        height: 100%;
+        width: 50%;
+        border-radius: 0 500px 500px 0
+
+      }
+      #hours{
+        width: 500px;
+        height: 500px;
+      }
+      #minutes{
+        width: 400px;
+        height: 400px;
+      }
+      #seconds{
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="hours" class="clockpart">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+
+      <div id="minutes" class="clockpart">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+
+      <div id="seconds" class="clockpart">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+    function clock(){
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+      document.querySelector('#hours').style.transform = `translate(-50% ,-50%) rotate(${hours / 12 * 360}deg)`
+      document.querySelector('#minutes').style.transform = `translate(-50% ,-50%) rotate(${minutes / 60 * 360}deg)`
+      document.querySelector('#seconds').style.transform = `translate(-50% ,-50%) rotate(${seconds / 60 * 360}deg)`
+      window.requestAnimationFrame(clock)
+    }
+    clock()
+    </script>
+  </body>
+</html>
