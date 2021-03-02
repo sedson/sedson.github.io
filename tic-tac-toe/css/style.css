@@ -1,0 +1,80 @@
+*{
+  font-family: monospace;
+  color: tan;
+  font-size: 24px;
+}
+
+body{
+  background: floralwhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+section{
+  width: 90vw;
+  height: 90vw;
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+}
+
+.box{
+  width: 33.33%;
+  height: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tile{
+  border: 1px solid tan;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: tan;
+  font-size: 80px;
+}
+
+.tile:hover{
+  background: lemonchiffon;
+  cursor: pointer;
+}
+
+.tile.winning{
+  background: mistyrose;
+}
+
+
+.tile.used:hover{
+  background: none;
+}
+
+
+.tile.winning:hover{
+  background: mistyrose;
+}
+
+#current-move{
+ margin: auto;
+ margin-top: 30px;
+}
+
+#reset-button{
+  display: none;
+}
+
+a{
+  text-decoration: underline;
+}
+a:hover{
+  cursor: pointer;
+}

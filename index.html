@@ -7,18 +7,24 @@
     <title>Seamus's Stuff</title>
     <style>
         body { background-color: ghostwhite; font-family:sans-serif; font-weight: 100;
-               padding: 40px; font-size: 18px; overflow: hidden;}
-        h1 {color: gray; text-transform: uppercase; font-weight: 100; font-size: 18px;}
-        a {color:#545454; display: block; margin-bottom: 0.5rem; text-decoration: none;}
+               padding: 40px; font-size: 21px; overflow: hidden;}
+        h1 {color: gray; text-transform: uppercase; font-weight: 100; font-size: 21px;}
+        p { margin: 0.5rem 0;}
+        a {color:#545454; margin-bottom: 0.5rem; text-decoration: none;}
         .random { position: absolute; z-index: 10; pointer-events: none;}
         a:hover { color: hotpink}
+        .tag, .date { vertical-align: middle; font-size: 15px; background-color: hotpink; color: ghostwhite; padding: 0.2rem; border-radius: 5px;}
+        .date { background-color: yellow; color: #545454}
     </style>
 </head>
 <body>
     <h1>Stuff</h1>
-    <a href="./Divs/index.html">Rectangles (Dec. 15)</a>
-    <a href="./Landscaper/index.html">Landscaper Game</a>
-    <a href="./todo/index.html">TODO</a>
+    <p><a href="./clocks/clock1.html">Circle Clock</a></p>
+    <p><a href="https://sedson.github.io/Project-1">NET RUIN <span class="tag">game</span></a></p>
+    <p><a href="./tic-tac-toe/index.html">Tic Tac Toe</a></p>
+    <p><a href="./todo/index.html">Todo list</a></p>
+    <p><a href="./Landscaper/index.html">Landscaper</a></p>
+    <p><a href="./Divs/index.html">Rectangles</a></p>
     <script>
         let body = document.querySelector("body");
         const scatter = (num, val) => {
