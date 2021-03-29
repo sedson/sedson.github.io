@@ -50,10 +50,15 @@ guess.onclick = () => {
   const actual = dom.new('p');
   actual.innerText = `Color was C: ${c} | M: ${m} | Y: ${y} | K: ${k}`
   dom.get('body').append(actual);
-  let offBy = Math.abs(cyan.value - c) + Math.abs(magenta.value - m) +
-              Math.abs(yellow.value - y) + Math.abs(black.value - b);
 
-  let percent = ( 100 * (offBy / 400)).toFixed(2);
+  console.log(cyan.value, magenta.value, yellow.value, black.value)
+  let offBy = Math.abs(cyan.value - c) +
+              Math.abs(magenta.value - m) +
+              Math.abs(yellow.value - y) +
+              Math.abs(black.value - k);
+
+
+  let percent = ( 100 * ( 1 - (offBy / 400))).toFixed(2);
   const per = dom.new('h3');
   per.innerText = `${percent}% accurate`;
   dom.get('body').append(per);
