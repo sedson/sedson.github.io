@@ -18,31 +18,48 @@ dom.get('.swatch').style.backgroundColor = randCol;
 console.log([c, m, y, k])
 
 
-const cyan = dom.get("#cyan");
+const cyan = dom.get('#cyan');
+const cyanValue = dom.get('#cval');
 cyan.value = 50;
+cyanValue.value = 50;
 cyan.oninput = () => {
-  dom.get('#cval').innerText = cyan.value;
+  cyanValue.value = cyan.value;
+}
+cyanValue.onchange = () => {
+  cyan.value = cyanValue.value;
 }
 
-const magenta = dom.get("#magenta");
+const magenta = dom.get('#magenta');
+const magentaValue = dom.get('#mval');
 magenta.value = 50;
-
+magentaValue.value = 50;
 magenta.oninput = () => {
-  dom.get('#mval').innerText = magenta.value;
+  magentaValue.value = magenta.value;
+}
+magentaValue.onchange = () => {
+  magenta.value = magentaValue.value;
 }
 
-const yellow = dom.get("#yellow");
+const yellow = dom.get('#yellow');
+const yellowVal = dom.get('#yval');
 yellow.value = 50;
-
+yellowVal.value = 50;
 yellow.oninput = () => {
-  dom.get('#yval').innerText = yellow.value;
+  yellowVal.value = yellow.value;
+}
+yellowVal.onchange = () => {
+  yellow.value = yellowVal.value;
 }
 
-const black = dom.get("#black");
+const black = dom.get('#black');
+const blackVal = dom.get('#kval');
 black.value = 50;
-
+blackVal.value = 50;
 black.oninput = () => {
-  dom.get('#kval').innerText = black.value;
+  blackVal.value = black.value;
+}
+blackVal.onchange = () => {
+  black.value = blackVal.value;
 }
 
 
