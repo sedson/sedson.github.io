@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Color Guess</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="convert.js" defer></script>
+    <script src="app.js" defer></script>
+
+  </head>
+  <body>
+    <div class="swatch">
+
+    </div>
+
+    <div class="sliders">
+
+      <div class="row">
+        <p>C</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="cyan">
+        <p id="cval">50</p>
+      </div>
+
+      <div class="row">
+        <p>M</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="magenta">
+        <p id="mval">50</p>
+
+      </div>
+
+      <div class="row">
+        <p>Y</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="yellow">
+        <p id="yval">50</p>
+
+      </div>
+
+      <div class="row">
+        <p>K</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="black">
+        <p id="kval">50</p>
+
+      </div>
+    </div>
+
+    <button type="button" name="button" id="guess">GUESS</button>
+
+
+  </body>
+</html>

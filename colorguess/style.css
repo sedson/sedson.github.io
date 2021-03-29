@@ -1,0 +1,30 @@
+body {
+  font-family: monospace;
+  text-align: center;
+  font-size: 21px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.row * {
+  margin: 5px 10px;
+}
+
+.swatch {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+button {
+  all: unset;
+  padding: 4px 24px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 21px;
+}
