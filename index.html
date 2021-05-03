@@ -13,16 +13,21 @@
         a {color: black; margin-bottom: 0.5rem; text-decoration: none;}
         .random { position: absolute; z-index: 10; pointer-events: none;}
         a:hover { color: hotpink}
-        .tag, .date { vertical-align: middle; font-size: 15px; background-color: hotpink; color: ghostwhite; padding: 0.2rem; border-radius: 5px;}
-        .date { background-color: yellow; color: #545454}
+        .tag, .date { vertical-align: middle; font-size: 15px; background-color: hotpink; color: white; padding: 0.25em 0.5em; border-radius: 5px; margin-left: 0.5em}
+        .date { background-color: gold; color: #545454}
+        .site { background-color: lightblue}
+        .workshop {background-color: mediumaquamarine}
     </style>
 </head>
 <body>
     <h1>Seamus Edson</h1>
-    <p><a href="https://drawing-with-friends.online">Drawing With Friends</a></p>
+    <p><a href="https://rustforms.itch.io/lostlots">Lost Lots</a><span class="tag game">game</span><span class="date">4/23/2021</span></p>
+    <p><a href="https://drawing-with-friends.online">Drawing with Friends</a><span class="tag site">site</span></p>
+    <p><a href="https://github.com/sedson/Building-Worlds-in-Blender">Building Worlds in Blender</a><span class="tag workshop">workshop</span><span class="date">2/14/2021</span></p>
     <p><a href="./clocks/clock1.html">Circle Clock</a></p>
-    <p><a href="https://sedson.github.io/Net-Ruin">Net Ruin</a></p>
-    <p><a href="./Divs/index.html">Rectangles</a></p>
+    <p><a href="https://sedson.github.io/Net-Ruin">Net Ruin</a><span class="tag game">game</span></p>
+    <p><a href="./anims/index.html">Rectangles 2</a></p>
+    <p><a href="./Divs/index.html">Rectangles 1</a></p>
     <script>
         let body = document.querySelector("body");
         const scatter = (num, val) => {
